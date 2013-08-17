@@ -31,6 +31,8 @@ gem 'puma', '~> 2.5.1'
 
 gem 'devise', '~> 3.0.2'
 
+gem 'slim'
+
 group :development, :test do
   gem 'rspec-rails', '~> 2.14.0'
 end
