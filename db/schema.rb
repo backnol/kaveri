@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130817025309) do
+ActiveRecord::Schema.define(version: 20130818015936) do
+
+  create_table "cards", force: true do |t|
+    t.string   "title"
+    t.integer  "origin",     default: 0
+    t.datetime "posted_at"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
