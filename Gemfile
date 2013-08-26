@@ -42,6 +42,7 @@ group :development, :test do
   gem 'shoulda-matchers', '~> 2.3.0'
   gem 'factory_girl_rails', '4.2.1'
   gem 'guard-rspec', '~> 3.0.2'
+  gem 'rb-fsevent'
 end
 
 group :doc do

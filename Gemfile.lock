@@ -193,6 +193,7 @@ DEPENDENCIES
   jquery-rails
   puma (~> 2.5.1)
   rails (= 4.0.0)
+  rb-fsevent
   rspec-rails (~> 2.14.0)
   sass-rails (~> 4.0.0)
   sdoc
