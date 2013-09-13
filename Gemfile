@@ -26,7 +26,7 @@ gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
@@ -37,12 +37,15 @@ gem 'devise', '~> 3.0.2'
 
 gem 'slim'
 
+gem 'awesome_print', '1.1.0'
+
 group :development, :test do
   gem 'rspec-rails', '~> 2.14.0'
   gem 'shoulda-matchers', '~> 2.3.0'
   gem 'factory_girl_rails', '4.2.1'
   gem 'guard-rspec', '~> 3.0.2'
   gem 'rb-fsevent'
+  gem 'database_cleaner', '1.0.1'
 end
 
 group :doc do
