@@ -39,6 +39,8 @@ gem 'slim'
 
 gem 'awesome_print', '1.1.0'
 
+gem 'twitter', '~> 4.8.1'
+
 group :development, :test do
   gem 'rspec-rails', '~> 2.14.0'
   gem 'shoulda-matchers', '~> 2.3.0'
