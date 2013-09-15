@@ -39,7 +39,7 @@ gem 'slim'
 
 gem 'awesome_print', '1.1.0'
 
-gem 'twitter', '~> 4.8.1'
+gem 'twitter', '~> 5.0.0.rc.1'
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.14.0'

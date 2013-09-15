@@ -1,4 +1,4 @@
-social_api_keys = YAML::load(File.open('keys/social_apis.yml'))
+social_api_keys = HashWithIndifferentAccess.new(YAML::load(File.open('keys/social_apis.yml')))
 twitter_key = social_api_keys[:twitter]
 client = Twitter::REST::Client.new do |config|
   config.consumer_key        = twitter_key[:consumer_key]
