@@ -1,4 +1,5 @@
 class CardsController < ApplicationController
+  respond_to :json
 
   # GET /cards.json
   def index
