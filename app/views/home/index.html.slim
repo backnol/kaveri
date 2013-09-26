@@ -1,20 +1,11 @@
 div ng-controller='CardsCtrl'
   #card-list-container
-    ul
-      li ng-repeat='card in cards' ng-click='showCard(card, $index)'
-        h3 ng-class='{active: $index == selectedRow}'
-          | {{card.title}}
+    .jumbotron ng-repeat='card in cards' ng-click='showCard(card, $index)'
+      p ng-class='{active: $index == selectedRow}'
+        | {{card.title}}
   
-  #card-view-container ng-show='selectedCard'
-    h2
-      | {{selectedCard.title}}
-    p
-      | Posted {{selectedCard.posted_at | date: 'mediumDate'}}
-
-
-
-            <li ng-repeat="screencast in screencasts"
-          ng-click="showScreencast(screencast, $index)">
-        <h3 ng-class="{active: $index == selectedRow}">{{screencast.title}}
-          <small>({{screencast.duration}})</small></h3>
-      </li>
+  / #card-view-container ng-show='selectedCard'
+  /   h2
+  /     | {{selectedCard.title}}
+  /   p
+  /     | Posted {{selectedCard.posted_at | date: 'mediumDate'}}
