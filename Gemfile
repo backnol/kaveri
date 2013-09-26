@@ -48,6 +48,7 @@ group :development, :test do
   gem 'guard-rspec', '~> 3.0.2'
   gem 'rb-fsevent'
   gem 'database_cleaner', '1.0.1'
+  gem 'faker'
 end
 
 group :doc do

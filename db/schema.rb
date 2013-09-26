@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20130818015936) do
     t.integer  "origin",     default: 0
     t.datetime "posted_at"
     t.integer  "user_id"
+    t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

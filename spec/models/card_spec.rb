@@ -4,7 +4,10 @@ describe Card do
   # Attribute validations
   # Title
   it { should have_db_column(:title).of_type :string }
-  it { should ensure_length_of(:title).is_at_least(1).is_at_most(140) }
+  it { should ensure_length_of(:title).is_at_least(1).is_at_most(255) }
+
+  # url
+  it { should have_db_column(:url).of_type :string }
   
   # Origin  
   it { should have_db_column(:origin).of_type(:integer) }
