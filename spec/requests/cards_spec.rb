@@ -13,13 +13,14 @@ describe "Cards", :type => :api do
 
   describe 'GET /cards/:id' do
     it 'returns single card' do
-      card = FactoryGirl.create(:card)
+      card = FactoryGirl.create(:card, originated_network: :twitter)
       get cards_path(card)
       response.status.should eql(200)
       cards = JSON.parse(response.body)
       cards.size.should == 1
-      cards.first['title'].should eq card.title
-      cards.first['link'].should eq card.link
+      cards.first['title'].should eq 'This title is is the bomb'
+      cards.first['link'].should eq 'http://www.google.com'
+      cards.first['originated_network'].should eq 'twitter'
     end
   end
 end

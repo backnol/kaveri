@@ -14,10 +14,54 @@ describe Card do
   
   # Origin  
   it { should have_db_column(:origin).of_type(:integer) }
-  it { should ensure_inclusion_of(:origin).in_array(%w[:local, twitter]) }
-  context 'origin setter' do
-    it 'for local post'
-    it 'for tweet'
+  it { should ensure_inclusion_of(:origin).in_array(%w[:local, :twitter, :instagram, :google_plus, :pintrest]) }
+
+  describe 'should set origin from sym' do
+    it 'for twitter' do
+      card = FactoryGirl.build(:card)
+      card.originated_network = :twitter
+      card.origin.should == 1
+    end
+
+    it 'for instagram' do
+      card = FactoryGirl.build(:card)
+      card.originated_network = :instagram
+      card.origin.should == 2
+    end
+
+    it 'for google+' do
+      card = FactoryGirl.build(:card)
+      card.originated_network = :google_plus
+      card.origin.should == 3
+    end
+
+    it 'for pintrest' do
+      card = FactoryGirl.build(:card)
+      card.originated_network = :pintrest
+      card.origin.should == 4
+    end
+  end
+  
+  describe 'should return originated network' do
+    it 'for twitter' do
+      card = FactoryGirl.build(:card, origin: 1)
+      card.originated_network.should == :twitter
+    end
+
+    it 'for instagram' do
+      card = FactoryGirl.build(:card, origin: 2)
+      card.originated_network.should == :instagram
+    end
+
+    it 'for google+' do
+      card = FactoryGirl.build(:card, origin: 3)
+      card.originated_network.should == :google_plus
+    end
+
+    it 'for pintrest' do
+      card = FactoryGirl.build(:card, origin: 4)
+      card.originated_network.should == :pintrest
+    end
   end
   
   # Poster At

@@ -12,9 +12,11 @@
  */
 
 @import "twitter/bootstrap";
+@import "cards";
 
 body {
   padding-top: 50px;
+  background-color: rgb(51, 51, 51);
 }
 
 .active {

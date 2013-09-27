@@ -1,3 +1,28 @@
 // Place all the styles related to the cards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#card-list-container{
+  .card_twitter{
+    background-color: #12b0c5;
+  }
+
+  .card_local{
+    background-color: #9c4274;
+  }
+
+  .card_google_plus{
+    background-color: #dc5945;
+  }
+
+  .card_instagram{
+    background-color: rgb(81, 127, 164);
+  }
+
+  .jumbotron{
+    p{
+      color: white;
+    }
+  }
+}
+
