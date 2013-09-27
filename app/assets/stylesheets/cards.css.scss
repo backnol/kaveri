@@ -4,7 +4,7 @@
 
 #card-list-container{
   .card_twitter{
-    background-color: #12b0c5;
+    background-color: #74b8ea;;
   }
 
   .card_local{
@@ -12,14 +12,20 @@
   }
 
   .card_google_plus{
-    background-color: #dc5945;
+    background-color: #D34836;
   }
 
   .card_instagram{
     background-color: rgb(81, 127, 164);
   }
 
+  .card_pintrest{
+    background-color: #C92228;
+  }
+
   .jumbotron{
+    margin-bottom: 15px;
+    padding: 30px;
     p{
       color: white;
     }

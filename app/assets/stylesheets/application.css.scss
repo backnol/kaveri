@@ -16,12 +16,19 @@
 
 body {
   padding-top: 50px;
-  background-color: rgb(51, 51, 51);
+  background-color: black;
 }
 
 .active {
   color: red;
 }
+.navbar-inverse {
+  background-color: #ff9618;
+  .navbar-brand {
+    color: white;
+  }
+}
+
 
 header {
   margin-bottom: 20px;
