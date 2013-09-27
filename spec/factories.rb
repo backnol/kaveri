@@ -2,6 +2,7 @@ FactoryGirl.define do
   factory :card do
     user
     title 'This title is is the bomb'
+    link 'http://www.google.com'
     origin 0
     posted_at Time.now
   end

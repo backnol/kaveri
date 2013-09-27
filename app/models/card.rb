@@ -1,3 +1,4 @@
+require 'uri'
 class Card < ActiveRecord::Base
   ORIGINS = [:local, :twitter]
   
@@ -9,4 +10,6 @@ class Card < ActiveRecord::Base
             inclusion: { in: 0..ORIGINS.size-1 }
   validates :posted_at,
             presence: true
+  validates :link,
+            format: { with: URI.regexp }
 end

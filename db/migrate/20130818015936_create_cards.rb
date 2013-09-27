@@ -5,7 +5,7 @@ class CreateCards < ActiveRecord::Migration
       t.integer  :origin, default: 0
       t.datetime :posted_at
       t.integer  :user_id
-      t.string   :url
+      t.string   :link
 
       t.timestamps
     end

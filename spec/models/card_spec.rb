@@ -7,7 +7,10 @@ describe Card do
   it { should ensure_length_of(:title).is_at_least(1).is_at_most(255) }
 
   # url
-  it { should have_db_column(:url).of_type :string }
+  it { should have_db_column(:link).of_type :string }
+  it { should_not allow_value('blah').for(:link)}
+  it { should_not allow_value('www.google.com').for(:link)}
+  it { should allow_value('http://www.google.com').for(:link)}
   
   # Origin  
   it { should have_db_column(:origin).of_type(:integer) }
@@ -22,7 +25,5 @@ describe Card do
   it { should validate_presence_of :posted_at }
   
   # Associations
-  it { should have_one :post }
-  it { should have_one :tweet }
   it { should belong_to :user }
 end

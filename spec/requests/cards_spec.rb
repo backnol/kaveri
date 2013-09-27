@@ -19,6 +19,7 @@ describe "Cards", :type => :api do
       cards = JSON.parse(response.body)
       cards.size.should == 1
       cards.first['title'].should eq card.title
+      cards.first['link'].should eq card.link
     end
   end
 end
