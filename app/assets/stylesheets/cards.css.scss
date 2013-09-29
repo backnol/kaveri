@@ -2,28 +2,67 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$twitter_color: #74b8ea;
+$local_color: #9c4274;
+$google_plus_color: #D34836;
+$instagram_color: rgb(81, 127, 164);
+$pintrest_color: #C92228;
+
+@mixin animated_background($time) {
+  -moz-transition: background $time linear;  
+  -webkit-transition: background $time linear;  
+  -ms-transition: background $time linear;  
+  -o-transition: background $time linear;  
+  transition: background $time linear; 
+}
+
 #card-list-container{
   .card_twitter{
-    background-color: #74b8ea;;
+    background-color: $twitter_color;
+    &.active{
+      background-color: lighten($twitter_color, 15%);
+    }
   }
 
   .card_local{
-    background-color: #9c4274;
+    background-color: $local_color;
+    &.active{
+      background-color: lighten($local_color, 15%);
+    }
   }
 
   .card_google_plus{
-    background-color: #D34836;
+    background-color: $google_plus_color;
+    &.active{
+      background-color: lighten($google_plus_color, 15%);
+    }
   }
 
   .card_instagram{
-    background-color: rgb(81, 127, 164);
+    background-color: $instagram_color;
+    &.active{
+      background-color: lighten($instagram_color, 15%);
+    }
   }
 
   .card_pintrest{
-    background-color: #C92228;
+    background-color: $pintrest_color;
+    &.active{
+      background-color: lighten($pintrest_color, 15%);
+    }
   }
 
+
+  // .active {
+  //   -moz-transition: background .3s linear;  
+  //   -webkit-transition: background .3s linear;  
+  //   -ms-transition: background .3s linear;  
+  //   -o-transition: background .3s linear;  
+  //   transition: background .3s linear; 
+  // }
+
   .jumbotron{
+    @include animated_background(.3s);
     margin-bottom: 15px;
     padding: 30px;
     p{

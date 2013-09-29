@@ -1,5 +1,5 @@
 div ng-controller='CardsCtrl'
   #card-list-container
-      .jumbotron ng-repeat='card in cards | filter:search' ng-click='showCard(card, $index)' ng-class="{card_twitter: card.originated_network == 'twitter', card_local: card.originated_network == 'local', card_google_plus: card.originated_network == 'google_plus', card_instagram: card.originated_network == 'instagram', card_pintrest: card.originated_network == 'pintrest' }"
-        p ng-class='{active: $index == selectedRow}'
+      .jumbotron ng-repeat='card in cards | filter:search' class="{{'card_' + card.originated_network}}" ng-click='showCard(card, $index)' ng-class='{active: $index == selectedRow, inactive: $index != selectedRow}'
+        p
           | {{card.title}}
