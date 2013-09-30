@@ -16,6 +16,12 @@ describe Card do
   it { should have_db_column(:origin).of_type(:integer) }
   it { should ensure_inclusion_of(:origin).in_array(%w[:local, :twitter, :instagram, :google_plus, :pintrest]) }
 
+  # image url
+  it { should have_db_column(:image_url).of_type(:string) }
+  it { should_not allow_value('blah').for(:link)}
+  it { should_not allow_value('www.google.com').for(:link)}
+  it { should allow_value('http://distilleryimage11.ak.instagram.com/62daa12ad2c211e292fc22000a1f9806_7.jpg').for(:link)}
+
   describe 'should set origin from sym' do
     it 'for twitter' do
       card = FactoryGirl.build(:card)
