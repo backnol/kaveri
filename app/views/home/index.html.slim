@@ -1,8 +1,13 @@
 div ng-controller='CardsCtrl'
   #card-list-container
-      .jumbotron ng-repeat='card in cards | filter:search' class="{{'card_' + card.originated_network}}" ng-click='showCard(card, $index)' ng-class='{active: $index == selectedRow, inactive: $index != selectedRow}'
+      .jumbotron [ ng-repeat='card in cards | filter:search'
+                   class="{{'card_' + card.originated_network}}" ng-click='showCard(card, $index)'
+                   ng-class='{active: $index == selectedRow, inactive: $index != selectedRow}' ]
         p
           | {{card.title}}
-        p ng-show='$index == selectedRow'
-          a href='{{card.link}}'
-            | {{card.link}}
+        .div ng-show='$index == selectedRow'
+          p
+            a href='{{card.link}}'
+              | {{card.link}}
+          p
+            img src="{{card.image_url}}"
