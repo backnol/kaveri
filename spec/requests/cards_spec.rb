@@ -21,6 +21,7 @@ describe "Cards", :type => :api do
       cards.first['title'].should eq 'This title is is the bomb'
       cards.first['link'].should eq 'http://www.google.com'
       cards.first['originated_network'].should eq 'twitter'
+      cards.first['image_url'].should eq 'http://distilleryimage11.ak.instagram.com/62daa12ad2c211e292fc22000a1f9806_7.jpg'
     end
   end
 end
