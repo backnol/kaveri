@@ -13,7 +13,9 @@ class Card < ActiveRecord::Base
   validates :link,
             format: { with: URI.regexp }
   validates :image_url,
-            format: { with: URI.regexp }
+            format: { with: URI.regexp },
+            allow_nil: true,
+            allow_blank: true
 
   def originated_network
     ORIGINS[read_attribute(:origin)]
