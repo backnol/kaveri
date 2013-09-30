@@ -41,6 +41,8 @@ gem 'awesome_print', '1.1.0'
 
 gem 'twitter', '~> 5.0.0.rc.1'
 
+gem 'compass-rails', github: "Compass/compass-rails", branch: "rails4-hack"
+
 group :development, :test do
   gem 'rspec-rails', '~> 2.14.0'
   gem 'shoulda-matchers', '~> 2.3.0'

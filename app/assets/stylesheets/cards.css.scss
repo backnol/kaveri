@@ -8,66 +8,65 @@ $google_plus_color: #D34836;
 $instagram_color: rgb(81, 127, 164);
 $pintrest_color: #C92228;
 
-@mixin animated_background($time) {
-  -moz-transition: background $time linear;  
-  -webkit-transition: background $time linear;  
-  -ms-transition: background $time linear;  
-  -o-transition: background $time linear;  
-  transition: background $time linear; 
-}
-
-#card-list-container{
-  .card_twitter{
+#card-list-container {
+  .card_twitter {
     background-color: $twitter_color;
-    &.active{
-      background-color: lighten($twitter_color, 15%);
+    p {
+      color: darken($twitter_color, 40%);
+    }
+    &.active {
+      background-color: lighten($twitter_color, 20%);
     }
   }
 
   .card_local{
     background-color: $local_color;
+    p {
+      color: darken($local_color, 30%);
+    }
     &.active{
-      background-color: lighten($local_color, 15%);
+      background-color: lighten($local_color, 30%);
     }
   }
 
   .card_google_plus{
     background-color: $google_plus_color;
+    p {
+      color: darken($google_plus_color, 30%);
+    }
     &.active{
-      background-color: lighten($google_plus_color, 15%);
+      background-color: lighten($google_plus_color, 20%);
     }
   }
 
   .card_instagram{
     background-color: $instagram_color;
+    p {
+      color: darken($instagram_color, 40%);
+    }
     &.active{
-      background-color: lighten($instagram_color, 15%);
+      background-color: lighten($instagram_color, 20%);
     }
   }
 
   .card_pintrest{
     background-color: $pintrest_color;
+    p {
+      color: darken($pintrest_color, 30%);
+    }
     &.active{
-      background-color: lighten($pintrest_color, 15%);
+      background-color: lighten($pintrest_color, 20%);
     }
   }
 
 
-  // .active {
-  //   -moz-transition: background .3s linear;  
-  //   -webkit-transition: background .3s linear;  
-  //   -ms-transition: background .3s linear;  
-  //   -o-transition: background .3s linear;  
-  //   transition: background .3s linear; 
-  // }
-
   .jumbotron{
-    @include animated_background(.3s);
+    @include transition-property(all);
+    @include transition-duration(.3s);
+    @include transition-timing-function(ease-in);
+
     margin-bottom: 15px;
     padding: 30px;
-    p{
-      color: white;
-    }
   }
 }
 

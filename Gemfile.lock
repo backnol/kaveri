@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/Compass/compass-rails.git
+  revision: 32c16cb90f78053310b35199a970c53355bcd300
+  branch: rails4-hack
+  specs:
+    compass-rails (1.0.3)
+      compass (>= 0.12.2, < 0.14)
+
+GIT
   remote: git://github.com/anjlab/bootstrap-rails.git
   revision: 8dd9af6998e33cff9f016f133873c47fea9b382d
   branch: 3.0.0
@@ -40,6 +48,7 @@ GEM
     bcrypt-ruby (3.1.1)
     buftok (0.1)
     builder (3.1.4)
+    chunky_png (1.2.8)
     coderay (1.0.9)
     coffee-rails (4.0.0)
       coffee-script (>= 2.2.0)
@@ -48,6 +57,10 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    compass (0.12.2)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
     database_cleaner (1.0.1)
     devise (3.0.2)
       bcrypt-ruby (~> 3.0)
@@ -69,6 +82,7 @@ GEM
       multipart-post (~> 1.2.0)
     ffi (1.9.0)
     formatador (0.2.4)
+    fssm (0.2.10)
     guard (1.8.2)
       formatador (>= 0.2.4)
       listen (>= 1.0.0)
@@ -201,6 +215,7 @@ DEPENDENCIES
   anjlab-bootstrap-rails!
   awesome_print (= 1.1.0)
   coffee-rails (~> 4.0.0)
+  compass-rails!
   database_cleaner (= 1.0.1)
   devise (~> 3.0.2)
   factory_girl_rails (= 4.2.1)
