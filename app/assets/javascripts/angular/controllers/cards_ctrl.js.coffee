@@ -3,8 +3,8 @@ App.controller 'CardsCtrl', ['$scope', 'Card', ($scope, Card) ->
   $scope.selectedRow  = null
 
   $scope.cards = Card.query ->
-    $scope.selectedCard = $scope.cards[0]
-    $scope.selectedRow = 0
+    $scope.selectedCard = null
+    $scope.selectedRow = null
 
 
   $scope.showCard = (card, row) ->
