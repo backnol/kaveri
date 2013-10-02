@@ -6,8 +6,8 @@ div ng-controller='CardsCtrl'
         p
           | {{card.title}}
         div ng-show='$index == selectedRow'
-          p
-            a href='{{card.link}}'
-              | {{card.link}}
+          / p
+          /  a href='{{card.link}}'
+          /    | {{card.link}}
           / p ng-show="{{card.originated_network == 'instagram'}}"
           /  img src="{{card.image_url}}"

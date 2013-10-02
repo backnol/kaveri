@@ -43,6 +43,8 @@ gem 'twitter', '~> 5.0.0.rc.1'
 
 gem 'compass-rails', github: "Compass/compass-rails", branch: "rails4-hack"
 
+gem  'animate-sass'
+
 group :development, :test do
   gem 'rspec-rails', '~> 2.14.0'
   gem 'shoulda-matchers', '~> 2.3.0'
