@@ -1,1 +1,1 @@
-window.App = angular.module('Kaveri', ['ngResource'])
+window.App = angular.module('Kaveri', ['ngResource', 'ngAnimate'])

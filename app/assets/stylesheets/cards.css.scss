@@ -61,12 +61,28 @@ $pintrest_color: #C92228;
 
 
   .jumbotron{
-    @include transition-property(all);
-    @include transition-duration(.3s);
-    @include transition-timing-function(ease-in);
-
     margin-bottom: 15px;
     padding: 30px;
+
   }
 }
+
+.card.ng-enter,
+.card.ng-leave {
+  -webkit-transition:0.3s linear all;
+  -moz-transition:0.3s linear all;
+  -o-transition:0.3s linear all;
+  transition:0.3s linear all;
+}
+
+.card.ng-enter,
+.card.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+.card.ng-leave,
+.card.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
 
