@@ -1,13 +1,13 @@
-div ng-controller='CardsCtrl'
-  #card-list-container
-      .jumbotron [ ng-repeat='card in cards | filter:search'
-                   class="{{'card_' + card.originated_network}} card" ng-click='showCard(card, $index)'
-                   ng-class='{active: $index == selectedRow, inactive: $index != selectedRow}' ]
-        p
-          | {{card.title}}
-        div ng-show='$index == selectedRow'
-          / p
-          /  a href='{{card.link}}'
-          /    | {{card.link}}
-          / p ng-show="{{card.originated_network == 'instagram'}}"
-          /  img src="{{card.image_url}}"
+#card-list-container
+  .panel-group#acordion ng-controller='CardsCtrl'
+    .panel.panel-default.card [ ng-repeat='card in cards | filter:search'
+                                class="{{'card_' + card.originated_network}}" ]
+      .panel-heading
+        h4.panel-title
+          a.accordion-toggle data-toggle="collapse" data-parent="#accordion" href="{{'#collapse-' + card.id}}"
+            | {{card.title}}
+      .panel-collapse.collapse id="{{'collapse-' + card.id}}"
+        .panel-body
+          a href="{{card.link}}" {{card.link}}
+          .clearfix
+          img ng-src="{{card.image_url}}" ng-show="{{card.originated_network == 'instagram'}}"
