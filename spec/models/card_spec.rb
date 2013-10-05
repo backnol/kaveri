@@ -5,24 +5,16 @@ describe Card do
   # Title
   it { should have_db_column(:title).of_type :string }
   it { should ensure_length_of(:title).is_at_least(1).is_at_most(255) }
+  
+  # Remote id
+  it { should have_db_column(:remote_id).of_type(:string) }
 
-  # url
-  it { should have_db_column(:link).of_type :string }
-  it { should_not allow_value('blah').for(:link)}
-  it { should_not allow_value('www.google.com').for(:link)}
-  it { should allow_value('http://www.google.com').for(:link)}
+  # Embed html
+  it { should have_db_column(:embed_html).of_type :text }
   
   # Origin  
   it { should have_db_column(:origin).of_type(:integer) }
   it { should ensure_inclusion_of(:origin).in_array(%w[:local, :twitter, :instagram, :google_plus, :pintrest]) }
-
-  # image url
-  it { should have_db_column(:image_url).of_type(:string) }
-  it { should_not allow_value('blah').for(:image_url) }
-  it { should_not allow_value('www.google.com').for(:image_url) }
-  it { should allow_value('').for(:image_url) }
-  it { should allow_value(nil).for(:image_url) }
-  it { should allow_value('http://distilleryimage11.ak.instagram.com/62daa12ad2c211e292fc22000a1f9806_7.jpg').for(:image_url) }
 
   describe 'should set origin from sym' do
     it 'for twitter' do
@@ -72,7 +64,7 @@ describe Card do
     end
   end
   
-  # Poster At
+  # Posted At
   it { should have_db_column(:posted_at).of_type(:datetime) }
   it { should validate_presence_of :posted_at }
   
