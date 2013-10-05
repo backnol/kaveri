@@ -9,79 +9,99 @@ $instagram_color: rgb(81, 127, 164);
 $pintrest_color: #C92228;
 
 #card-list-container {
-  .card_twitter {
-    background-color: $twitter_color;
-    p {
-      color: darken($twitter_color, 40%);
+  .card {
+    border: none;
+    border-radius: 0;
+    
+    .panel-heading{
+      border-radius: 0;
+      h4.panel-title {
+        color: #E4E4E4;
+        a {
+          text-decoration: none;
+        }
+      }
     }
-    &.active {
-      background-color: lighten($twitter_color, 20%);
-    }
-  }
 
-  .card_local{
-    background-color: $local_color;
-    p {
-      color: darken($local_color, 30%);
+    &.card_twitter {
+      .panel-body {
+        background-color: $twitter_color;
+        border: none;
+      }
+      .panel-heading {
+        background-color: $twitter_color;
+      }
+      .twitter-tweet{
+        background-color: white;
+      }
     }
-    &.active{
-      background-color: lighten($local_color, 30%);
-    }
-  }
-
-  .card_google_plus{
-    background-color: $google_plus_color;
-    p {
-      color: darken($google_plus_color, 30%);
-    }
-    &.active{
-      background-color: lighten($google_plus_color, 20%);
-    }
-  }
-
-  .card_instagram{
-    background-color: $instagram_color;
-    p {
-      color: darken($instagram_color, 40%);
-    }
-    &.active{
-      background-color: lighten($instagram_color, 20%);
-    }
-  }
-
-  .card_pintrest{
-    background-color: $pintrest_color;
-    p {
-      color: darken($pintrest_color, 30%);
-    }
-    &.active{
-      background-color: lighten($pintrest_color, 20%);
-    }
-  }
-}
-
-.card {
- -webkit-transition:0.3s linear background;                                                                                                                         
- -moz-transition:0.3s linear background;                                                                                                                            
- -o-transition:0.3s linear background;                                                                                                                              
- transition:0.3s linear background;
-
-  margin-bottom: 15px;
-  padding: 30px;
-
-  &.ng-enter {
-    -webkit-animation: fadeIn 0.3s;
-    -moz-animation: fadeIn 0.3s;
-    -ms-animation: fadeIn 0.3s;
-    animation: fadeIn 0.3s;
-  }
   
-  &.ng-leave {
-    -webkit-animation: fadeOut 0.3s;
-    -moz-animation: fadeOut 0.3s;
-    -ms-animation: fadeOut 0.3s;
-    animation: fadeOut 0.3s;
+    &.card_local{
+      .panel-body {
+        background-color: $local_color;
+        border: none;
+      }
+      .panel-heading {
+        background-color: $local_color;
+      }
+    }
+  
+    &.card_google_plus{
+      .panel-body {
+        background-color: $google_plus_color;
+        border: none;
+      }
+      .panel-heading {
+        background-color: $google_plus_color;
+      }
+    }
+  
+    &.card_instagram {
+      .panel-body {
+        background-color: $instagram_color;
+        border: none;
+      }
+      .panel-heading {
+        background-color: $instagram_color;
+      }
+    }
+  
+    &.card_pintrest{
+      .panel-body {
+        background-color: $pintrest_color;
+        border: none;
+      }
+      .panel-heading {
+        background-color: $pintrest_color;        
+      }
+    }
+    -webkit-transition:0.3s linear all;                                                                                                                         
+    -moz-transition:0.3s linear all;                                                                                                                            
+    -o-transition:0.3s linear all;                                                                                                                              
+    transition:0.3s linear all;
+  
+    
+    
+    margin-bottom: 15px;
+    //padding: 30px;
+    //background-size: 100%;
+  
+    &.ng-enter {
+      -webkit-animation: fadeIn 0.3s;
+      -moz-animation: fadeIn 0.3s;
+      -ms-animation: fadeIn 0.3s;
+      animation: fadeIn 0.3s;
+    }
+    
+    &.ng-leave {
+      -webkit-animation: fadeOut 0.3s;
+      -moz-animation: fadeOut 0.3s;
+      -ms-animation: fadeOut 0.3s;
+      animation: fadeOut 0.3s;
+    }
   }
 }
+
+
 
 
