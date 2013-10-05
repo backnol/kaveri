@@ -1,6 +1,6 @@
 #card-list-container
   .panel-group#acordion ng-controller='CardsCtrl'
-    .panel.panel-default.card [ ng-repeat='card in cards | filter:search'
+    .panel.panel-default.card [ ng-repeat="card in cards | filter:search | orderBy:posted_at:reverse"
                                 class="{{'card_' + card.originated_network}}" ]
       .panel-heading
         h4.panel-title
@@ -9,6 +9,4 @@
       .panel-collapse.collapse id="{{'collapse-' + card.id}}"
         .panel-body
           p.text-center
-            iframe ng-show="{{card.originated_network == 'instagram'}}" src="//instagram.com/p/acVILUDhM-/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"
-            div ng-show="{{card.originated_network == 'twitter'}}"
-              | <blockquote class="twitter-tweet"><p>Dung Beetles Navigate Via the Milky Way, First Known in Animal Kingdom. Can horoscope be an advanced science? <a href="http://t.co/Tjt2gRNAgt">http://t.co/Tjt2gRNAgt</a></p>&mdash; Backnol Yogendran (@backnol) <a href="https://twitter.com/backnol/statuses/381459911554506755">September 21, 2013</a></blockquote>
+            div ng-bind-html="card.embed_html"

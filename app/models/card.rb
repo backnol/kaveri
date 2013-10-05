@@ -10,12 +10,6 @@ class Card < ActiveRecord::Base
             inclusion: { in: 0..(ORIGINS.size - 1) }
   validates :posted_at,
             presence: true
-  validates :link,
-            format: { with: URI.regexp }
-  validates :image_url,
-            format: { with: URI.regexp },
-            allow_nil: true,
-            allow_blank: true
 
   def originated_network
     ORIGINS[read_attribute(:origin)]

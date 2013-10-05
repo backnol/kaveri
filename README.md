@@ -7,6 +7,9 @@ networks of the user and display it in one place.
 
 Quick setup
 -----------
+First you need to get api keys for the social network APIs.
+Then you need to copy `keys/social_apis_template.yml` to `keys/social_apis.yml`.
+Fill in the obtained API keys on the `keys/social_apis.yml`
 
 From the project directory run the following commands
 
