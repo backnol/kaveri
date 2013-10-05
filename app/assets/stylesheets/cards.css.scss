@@ -10,38 +10,67 @@ $pintrest_color: #C92228;
 
 #card-list-container {
   .card {
-    h4.panel-title {
-      color: #E4E4E4;
-      a {
-        text-decoration: none;
+    border: none;
+    border-radius: 0;
+    
+    .panel-heading{
+      border-radius: 0;
+      h4.panel-title {
+        color: #E4E4E4;
+        a {
+          text-decoration: none;
+        }
       }
     }
 
     &.card_twitter {
+      .panel-body {
+        background-color: $twitter_color;
+        border: none;
+      }
       .panel-heading {
         background-color: $twitter_color;
+      }
+      .twitter-tweet{
+        background-color: white;
       }
     }
   
     &.card_local{
+      .panel-body {
+        background-color: $local_color;
+        border: none;
+      }
       .panel-heading {
         background-color: $local_color;
       }
     }
   
     &.card_google_plus{
+      .panel-body {
+        background-color: $google_plus_color;
+        border: none;
+      }
       .panel-heading {
         background-color: $google_plus_color;
       }
     }
   
     &.card_instagram {
+      .panel-body {
+        background-color: $instagram_color;
+        border: none;
+      }
       .panel-heading {
         background-color: $instagram_color;
       }
     }
   
     &.card_pintrest{
+      .panel-body {
+        background-color: $pintrest_color;
+        border: none;
+      }
       .panel-heading {
         background-color: $pintrest_color;        
       }
