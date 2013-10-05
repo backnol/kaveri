@@ -1,6 +1,6 @@
 #card-list-container
   .panel-group#acordion ng-controller='CardsCtrl'
-    .panel.panel-default.card [ ng-repeat='card in cards | filter:search'
+    .panel.panel-default.card [ ng-repeat="card in cards | filter:search | orderBy:posted_at:reverse"
                                 class="{{'card_' + card.originated_network}}" ]
       .panel-heading
         h4.panel-title
