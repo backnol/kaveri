@@ -1,12 +1,15 @@
 #card-list-container
   .panel-group#acordion ng-controller='CardsCtrl'
-    .panel.panel-default.card [ ng-repeat="card in cards | filter:search | orderBy:posted_at:reverse"
+    .panel.panel-default.card [ ng-repeat="card in cards | filter:search | orderBy:'posted_ago'"
                                 class="{{'card_' + card.originated_network}}" ]
       .panel-heading
         h4.panel-title
           a.accordion-toggle data-toggle="collapse" data-parent="#accordion" href="{{'#collapse-' + card.id}}"
-            | {{card.title}}
+            | {{card.title}} &nbsp;
+            | {{card.posted_ago}}
       .panel-collapse.collapse id="{{'collapse-' + card.id}}"
         .panel-body
-          p.text-center
-            div ng-bind-html="card.embed_html"
+          div ng-bind-html="card.embed_html" ng-show="card.originated_network == 'twitter'"
+          div ng-show="card.originated_network == 'instagram'"
+            / iframe ng-src="{{card.embed_html}}" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"
+            / | <iframe ng-src="//instagram.com/p/acVILUDhM-/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></i

@@ -7,3 +7,9 @@ TWITTER = Twitter::REST::Client.new do |config|
   config.access_token        = twitter_key[:access_token]
   config.access_token_secret = twitter_key[:access_token_secret]
 end
+
+twitter_key = social_api_keys[:instagram]
+INSTAGRAM = Instagram.configure do |config|
+  config.client_id = twitter_key[:client_id]
+  config.access_token = twitter_key[:access_token]
+end

@@ -41,6 +41,8 @@ gem 'awesome_print', '1.1.0'
 
 gem 'twitter', '~> 5.0.0.rc.1'
 
+gem 'instagram', '~> 0.10.0'
+
 gem 'compass-rails', github: "Compass/compass-rails", branch: "rails4-hack"
 
 gem  'animate-sass'
